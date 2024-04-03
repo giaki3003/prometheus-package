@@ -72,7 +72,7 @@ def run(plan,
     if node_selectors == None:
         node_selectors = {}
 
-    prometheus_service = plan.add_service(name=name, config=ServiceConfig(
+    prometheus_service = plan.add_service(name="prometheus", config=ServiceConfig(
         image="prom/prometheus:latest",
         ports={
             "http": PortSpec(
